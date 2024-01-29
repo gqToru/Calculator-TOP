@@ -2,40 +2,26 @@ body {
   background-color: black;
 }
 
-#calculator_container {
-  background-color: grey;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-}
-
 #calc_body {
-  height: 400px;
-  width: 350px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#numbers_btns {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-#numbers_btns button {
-  width: 100px;
-  height: 70px;
-}
-
-#operator_btns {
+  background-color: grey;
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-content: space-around;
 }
 
-#operator_btns button {
-  width: 80%;
-  height: 80px;
+#display input {
+  padding: 10px;
+  width: 60%;
+}
+
+#numbers_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+}
+
+#numbers {
+  flex: 1 1 33.33%;
+  text-align: center;
 }
