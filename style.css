@@ -10,9 +10,12 @@ body {
   flex-direction: column;
 }
 
-#display input {
-  padding: 10px;
+#display {
   width: 60%;
+  margin: 5px;
+  text-align: center;
+  background-color: white;
+  align-self: center;
 }
 
 #numbers_container {
