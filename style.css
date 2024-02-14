@@ -21,10 +21,27 @@ body {
 #numbers_container {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 50%;
+  flex: 1 1 70%;
 }
 
 #numbers {
   flex: 1 1 33.33%;
   text-align: center;
+}
+
+#not_display {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#operators_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+
+#operator {
+  flex: 1;
 }
