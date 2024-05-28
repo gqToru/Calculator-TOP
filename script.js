@@ -39,7 +39,8 @@ for (let i = 0; i < operators.length; i++) {
 clearBtn.addEventListener("click", function () {
   display.textContent = "0";
   firstValue = secondValue = 0;
-  numberValue = secondNumberValue = [];
+  numberValue = [];
+  secondNumberValue = [];
   selectedOperator = "";
   result = 0;
 });
