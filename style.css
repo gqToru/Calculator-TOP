@@ -42,6 +42,7 @@ body {
   flex: 1;
 }
 
-.operator {
+.operator,
+.nonOperator {
   flex: 1;
 }
