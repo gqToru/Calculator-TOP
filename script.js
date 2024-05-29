@@ -50,14 +50,32 @@ function addition(firstNum, secondNum) {
   return firstNum + secondNum;
 }
 
+function substraction(firstNum, secondNum) {
+  return firstNum - secondNum;
+}
+
+function multiplication(firstNum, secondNum) {
+  return firstNum * secondNum;
+}
+
+function division(firstNum, secondNum) {
+  return firstNum / secondNum;
+}
+
 function operate(firstNum, secondNum, operator) {
   switch (operator) {
     case "+":
       result = addition(firstNum, secondNum);
       return result;
     case "-":
-      console.log("resta");
-      break;
+      result = substraction(firstNum, secondNum);
+      return result;
+    case "x":
+      result = multiplication(firstNum, secondNum);
+      return result;
+    case "d":
+      result = division(firstNum, secondNum);
+      return result;
   }
 }
 
