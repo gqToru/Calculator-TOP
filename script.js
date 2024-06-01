@@ -29,7 +29,15 @@ for (let i = 0; i < elements.length; i++) {
 
 for (let i = 0; i < operators.length; i++) {
   operators[i].addEventListener("click", function () {
-    selectedOperator = this.value;
+    if (selectedOperator === "") {
+      selectedOperator = this.value;
+    } else {
+      firstValue = operate(firstValue, secondValue, selectedOperator);
+      secondNumberValue = [];
+      secondValue = 0;
+      display.textContent = firstValue;
+      selectedOperator = this.value;
+    }
     console.log(selectedOperator);
   });
 }
