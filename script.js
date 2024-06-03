@@ -12,17 +12,21 @@ let firstValue = 0;
 let secondValue = 0;
 let result = 0;
 
+function updateDisplay(value = 0) {
+  display.textContent = value;
+}
+
 /// listen to number buttons inputs ///
 for (let i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", function () {
     if (selectedOperator === "") {
       numberValue.push(this.value);
       firstValue = parseInt(numberValue.join(""));
-      display.textContent = firstValue;
+      updateDisplay(firstValue);
     } else if (selectedOperator !== "") {
       secondNumberValue.push(this.value);
       secondValue = parseInt(secondNumberValue.join(""));
-      display.textContent = secondValue;
+      updateDisplay(secondValue);
     }
   });
 }
@@ -35,7 +39,7 @@ for (let i = 0; i < operators.length; i++) {
       firstValue = operate(firstValue, secondValue, selectedOperator);
       secondNumberValue = [];
       secondValue = 0;
-      display.textContent = firstValue;
+      updateDisplay(firstValue);
       selectedOperator = this.value;
     }
     console.log(selectedOperator);
@@ -45,7 +49,7 @@ for (let i = 0; i < operators.length; i++) {
 
 /// Clear button function ///
 clearBtn.addEventListener("click", function () {
-  display.textContent = "0";
+  updateDisplay();
   firstValue = secondValue = 0;
   numberValue = [];
   secondNumberValue = [];
@@ -88,5 +92,5 @@ function operate(firstNum, secondNum, operator) {
 }
 
 equalBtn.addEventListener("click", function () {
-  display.textContent = operate(firstValue, secondValue, selectedOperator);
+  updateDisplay(operate(firstValue, secondValue, selectedOperator).toFixed(3));
 });
